@@ -1,34 +1,16 @@
-delete from Ingredient_Ref;
-delete from Taco;
-delete from Taco_Order;
-delete from Ingredient;
+USE tacocloud;
 
-insert into Ingredient (id, name, type)
-values ('FLTO', 'Flour Tortilla', 'WRAP');
+TRUNCATE tacos;
+TRUNCATE orders;
+TRUNCATE ingredients;
 
-insert into Ingredient (id, name, type)
-values ('COTO', 'Corn Tortilla', 'WRAP');
-
-insert into Ingredient (id, name, type)
-values ('GRBF', 'Ground Beef', 'PROTEIN');
-
-insert into Ingredient (id, name, type)
-values ('CARN', 'Carnitas', 'PROTEIN');
-
-insert into Ingredient (id, name, type)
-values ('TMTO', 'Diced Tomatoes', 'VEGGIES');
-
-insert into Ingredient (id, name, type)
-values ('LETC', 'Lettuce', 'VEGGIES');
-
-insert into Ingredient (id, name, type)
-values ('CHED', 'Cheddar', 'CHEESE');
-
-insert into Ingredient (id, name, type)
-values ('JACK', 'Monterrey Jack', 'CHEESE');
-
-insert into Ingredient (id, name, type)
-values ('SLSA', 'Salsa', 'SAUCE');
-
-insert into Ingredient (id, name, type)
-values ('SRCR', 'Sour Cream', 'SAUCE');
+INSERT INTO ingredients (id, name, type) VALUES ('FLTO', 'Flour Tortilla', 'WRAP');
+INSERT INTO ingredients (id, name, type) VALUES ('COTO', 'Corn Tortilla', 'WRAP');
+INSERT INTO ingredients (id, name, type) VALUES ('GRBF', 'Ground Beef', 'PROTEIN');
+INSERT INTO ingredients (id, name, type) VALUES ('CARN', 'Carnitas', 'PROTEIN');
+INSERT INTO ingredients (id, name, type) VALUES ('TMTO', 'Diced Tomatoes', 'VEGGIES');
+INSERT INTO ingredients (id, name, type) VALUES ('LETC', 'Lettuce', 'VEGGIES');
+INSERT INTO ingredients (id, name, type) VALUES ('CHED', 'Cheddar', 'CHEESE');
+INSERT INTO ingredients (id, name, type) VALUES ('JACK', 'Monterrey Jack', 'CHEESE');
+INSERT INTO ingredients (id, name, type) VALUES ('SLSA', 'Salsa', 'SAUCE');
+INSERT INTO ingredients (id, name, type) VALUES ('SRCR', 'Sour Cream', 'SAUCE');

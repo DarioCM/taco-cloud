@@ -1,22 +1,17 @@
 package dev.dario.tacocloud.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.Data;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 @Data
-@Entity
+@Table("ingredients")
 public class Ingredient {
 
-    @Id
-    private String id;
+    @PrimaryKey
+    private String id; // Ingredient ID (e.g., FLTO, GRBF)
 
-    private String name;
+    private String name; // Ingredient name
 
-    private String type;
-
-    public enum Type {
-        WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
-    }
-
+    private String type; // Ingredient type (WRAP, PROTEIN, etc.)
 }
